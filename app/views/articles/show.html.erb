@@ -1,6 +1,13 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.content %></p>
-
-<p><%= link_to "Edit", edit_article_path %></p>
-<p><%= link_to "Delete", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
-<p><%= link_to "Back", articles_path %></p>
+<div class="container">
+  <div class="justify-content-center row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <article>
+        <h2><%= @article.title %></h2>
+        <p><%= @article.content %></p>
+      </article>
+          <%= link_to "Edit", edit_article_path %>
+          <%= link_to "Delete", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <a href="/articles" class="btn btn-outline-primary">Back</a>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,20 @@
-<%= form_for(@article) do |f| %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+<div class="container">
+  <div class="justify-content-center row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1>New article</h1>
+        <%= form_for(@article) do |f| %>
+        <div>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+        <div>
+          <%= f.label :content %>
+          <%= f.text_field :content %>
+        </div>
+        <div>
+          <%= f.submit %>
+        </div>
+        <% end %>
+    </div>
   </div>
-  <div>
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

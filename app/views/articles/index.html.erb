@@ -1,6 +1,12 @@
-<p><%= link_to "Create", new_article_path %></p>
-
 <% @articles.each do |article| %>
-<h1><%= link_to article.title, article_path(article) %></h1>
-<p><%= article.content %></p>
+<div class="container">
+  <div class="justify-content-center row">
+    <div class="col-sm-8 col-sm-offset-2 link-secondary">
+      <article>
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <p><%= article.content %></p>
+      </article>
+    </div>
+  </div>
+</div>
 <% end %>
