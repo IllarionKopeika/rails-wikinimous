@@ -1,4 +1,4 @@
 <%= render "form", article: @article %>
 
-<%= link_to "Cancel", article_path(@article) %>
-<a href="/articles" class="btn btn-outline-primary">Back</a>
+<%= link_to "Cancel", article_path(@article), class: "btn btn-outline-primary" %>
+<%= link_to "Back", articles_path, class: "btn btn-outline-primary" %>
